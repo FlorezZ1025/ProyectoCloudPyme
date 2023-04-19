@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>CLOUDPYME</h1>
+    <p class="lead">Es una plataforma encargada a dar guia a los usuarios para la creacion de algunos tipos de´pymes, brindando así la informacion puntual de estas.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Leer más &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Iniciar Sesión</h2>
+        <table>
+        <tr>
+            <td>Acá vamos a iniciar sesión y lasso y santiago son unas perras</td>
+        </tr>
+        <tr>
+            <td class="btn btn-default" href="@Url.Action("IniciarSesion","Home")"> Iniciar sesión &lArr;</td>
+        </tr>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <h2>Registrar Paciente</h2>
+        <table>
+        <tr><td>Acá vamos a registrar</td></tr>
+        <tr>
+            <td class="btn btn-default"><a href="@Url.Action("Registrar","Home")">Registra &lArr;</a></td>
+        </tr>
+        </table>
+
+    </div>
+</div>
