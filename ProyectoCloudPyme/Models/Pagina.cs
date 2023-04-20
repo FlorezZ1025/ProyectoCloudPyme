@@ -28,7 +28,7 @@ namespace ProyectoCloudPyme.Models
             return false;
         }
 
-        public bool ContraseñaValida(string contraseña)
+        public bool ContraValida(string contraseña)
         {
             foreach (Usuario usuario_ in usuarios)
             {

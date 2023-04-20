@@ -60,7 +60,7 @@ namespace ProyectoCloudPyme.Controllers
             string email = Request.Form["email"];
             string contraseña = Request.Form["contraseña"];
 
-            if (mipagina.EstaRegistrado(email) && mipagina.ContraseñaValida(contraseña))
+            if (mipagina.EstaRegistrado(email) && mipagina.ContraValida(contraseña))
             {
                     //aqui va un alert
                   return RedirectToAction("PaginaUsuario");
