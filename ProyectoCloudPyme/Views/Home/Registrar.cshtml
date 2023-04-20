@@ -1,7 +1,55 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Registro";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<html>
+<head>
+    <title>Registrar Usuario</title>
+        <link rel="stylesheet" href="~/Content/Estilos.css" />
 
-<p>Use this area to provide additional information.</p>
+</head>
+<body>
+    <div>
+        <h3>REGISTRAR USUARIO</h3>
+
+
+        @using (Html.BeginForm("capturardatosRegistro", "Home", FormMethod.Post))
+        {
+            <form action="Usuario/Usuario" method="post">
+                <table>
+                    <tr>
+                        <td><label>Identificación:</label></td>
+                        <td><input type="text" name="id" pattern="[0-9]+" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" autocomplete="off" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nombre </label></td>
+                        <td><input type="text" name="nombre" pattern="[a-zA-Z.,:;()¿?¡! ñ]+" autocomplete="off" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Primer Apellido</label></td>
+                        <td><input type="text" name="apellido_1" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Segundo Apellido</label></td>
+                        <td><input type="text" name="apellido_2" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Fecha nacimiento</label></td>
+                        <td><input type="date" name="fh_nacimiento" value="" style=" width: 300px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email</label></td>
+                        <td><input type="text" name="email" value="" autocomplete="off" required /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nueva contraseña </label></td>
+                        <td><input type="text" name="contraseña" value="" autocomplete="off" maxlength="15" required /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="Guardar" value="Guardar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+    </div>
+</body>
+</html>

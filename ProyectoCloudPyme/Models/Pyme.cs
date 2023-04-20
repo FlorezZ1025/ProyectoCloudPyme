@@ -11,5 +11,8 @@ namespace ProyectoCloudPyme.Models
         private string tipo_pyme;
         private string usuario_pyme;
         private string descripcion;
+
+
+
     }
 }
