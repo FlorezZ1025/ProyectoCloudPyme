@@ -35,7 +35,8 @@ namespace ProyectoCloudPyme.Controllers
     
         }
 
-        public ActionResult capturardatosRegistro() {
+        public ActionResult capturardatosRegistro() 
+        {
             int id = Convert.ToInt32(Request.Form["id"]);
             string nombre = Request.Form["name"];
             string apellido_1 = Request.Form["apellido_1"];
@@ -48,7 +49,7 @@ namespace ProyectoCloudPyme.Controllers
 
             mipagina.AgregarUsuario(usuario);
 
-            return RedirectToAction("IniciarSesion");
+            return View();
         }
         public ActionResult IniciarSesion()
         {

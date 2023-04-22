@@ -13,7 +13,7 @@ namespace ProyectoCloudPyme.Models
 
         public void AgregarUsuario(Usuario usuario)
         {
-            usuarios.Add(usuario);
+            Usuarios.Add(usuario);
         }
 
         public bool EstaRegistrado(string email)
