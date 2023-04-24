@@ -35,6 +35,39 @@ namespace ProyectoCloudPyme.Controllers
     
         }
 
+        public ActionResult PaginaUsuario()
+        {
+            string email = (string)TempData["email"];
+            TempData.Keep("email");
+            string contraseña = (string)TempData["contraseña"];
+            TempData.Keep("contraseña");
+
+            Usuario usuario = mipagina.TraerUsuario(email, contraseña);
+            return View(usuario);
+        }
+        public ActionResult VerificarExistencia()
+        {
+            
+            string email = Request.Form["email"];
+            string contraseña = Request.Form["contraseña"];
+
+            if (mipagina.EstaRegistrado(email) && mipagina.ContraValida(contraseña))
+            {
+                TempData["email"] = email;
+                TempData.Keep("email");
+                TempData["contraseña"] = contraseña;
+                TempData.Keep("contraseña");
+
+                //Usuario usuario = mipagina.TraerUsuario(email, contraseña);
+                  
+                    //aqui va un alert
+                return RedirectToAction("PaginaUsuario");
+                
+            }
+            //aqui va un alert
+            return RedirectToAction("iniciarSesion");
+        }
+
         public ActionResult capturardatosRegistro() 
         {
             int id = Convert.ToInt32(Request.Form["id"]);
@@ -49,27 +82,13 @@ namespace ProyectoCloudPyme.Controllers
 
             mipagina.AgregarUsuario(usuario);
 
-            return View();
+            return RedirectToAction("IniciarSesion");
         }
         public ActionResult IniciarSesion()
         {
             return View();
         }
 
-        public ActionResult VerificarExistencia()
-        {
-            string email = Request.Form["email"];
-            string contraseña = Request.Form["contraseña"];
-
-            if (mipagina.EstaRegistrado(email) && mipagina.ContraValida(contraseña))
-            {
-                    //aqui va un alert
-                  return RedirectToAction("PaginaUsuario");
-                
-            }
-            //aqui va un alert
-            return RedirectToAction("iniciarSesion");
-        }
     }
 
 }

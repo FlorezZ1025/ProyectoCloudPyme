@@ -8,12 +8,12 @@ namespace ProyectoCloudPyme.Models
 {
     public class Pagina
     {
-        private List<Usuario> usuarios = new List<Usuario>();
+        private static List<Usuario> usuarios = new List<Usuario>();
         public List<Usuario> Usuarios { get => usuarios; set => usuarios = value; } 
 
         public void AgregarUsuario(Usuario usuario)
         {
-            Usuarios.Add(usuario);
+            usuarios.Add(usuario);
         }
 
         public bool EstaRegistrado(string email)
@@ -38,6 +38,18 @@ namespace ProyectoCloudPyme.Models
                 }
             }
             return false;
+        }
+
+        public Usuario TraerUsuario(string email,string contraseña)
+        {
+            foreach (Usuario usuario_ in usuarios)
+            {
+                if(email == usuario_.Email && contraseña == usuario_.Contraseña)
+                {
+                    return usuario_;
+                }
+            }
+            return null;
         }
         
 

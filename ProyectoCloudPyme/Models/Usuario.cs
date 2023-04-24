@@ -12,18 +12,18 @@ namespace ProyectoCloudPyme.Models
         private string   apellido_1;
         private string   apellido_2;
         private DateTime fhnacimiento;
-        private string   contraseña;
         private string   email;
+        private string   contraseña;
 
-        public Usuario(int id, string nombre, string apellido_1, string apellido_2, DateTime fhnacimiento, string contraseña, string email)
+        public Usuario(int id, string nombre, string apellido_1, string apellido_2, DateTime fhnacimiento, string email, string contraseña )
         {
             this.Id           = id;
             this.Nombre       = nombre;
             this.Apellido_1   = apellido_1;
             this.Apellido_2   = apellido_2;
             this.Fhnacimiento = fhnacimiento;
-            this.Contraseña   = contraseña;
             this.Email        = email;
+            this.Contraseña   = contraseña;
         }
 
         public int Id { get => id; set => id = value; }
@@ -31,7 +31,7 @@ namespace ProyectoCloudPyme.Models
         public string Apellido_1 { get => apellido_1; set => apellido_1 = value; }
         public string Apellido_2 { get => apellido_2; set => apellido_2 = value; }
         public DateTime Fhnacimiento { get => fhnacimiento; set => fhnacimiento = value; }
-        public string Contraseña { get => contraseña; set => contraseña = value; }
         public string Email { get => email; set => email = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
     }
 }
