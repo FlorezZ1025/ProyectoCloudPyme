@@ -71,7 +71,7 @@ namespace ProyectoCloudPyme.Controllers
         public ActionResult capturardatosRegistro() 
         {
             int id = Convert.ToInt32(Request.Form["id"]);
-            string nombre = Request.Form["name"];
+            string nombre = Request.Form["nombre"];
             string apellido_1 = Request.Form["apellido_1"];
             string apellido_2 = Request.Form["apellido_2"];
             DateTime fhnacimiento = DateTime.Parse(Request.Form["fh_nacimiento"]);

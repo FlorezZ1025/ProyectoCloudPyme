@@ -2,10 +2,13 @@
     ViewBag.Title = "Home Page";
 }
 
+<head>
+    <link rel="stylesheet" href="~/Content/Estilos.css" />
+</head>
 <div class="jumbotron">
     <h1>CLOUDPYME</h1>
     <p class="lead">Cloud Pyme es una plataforma encargada de dar guia a los usuarios para la creacion de algunos tipos de pymes, brindando así la informacion puntual de estas. </p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Leer más &raquo;</a></p>
+    <p><a href="@Url.Action("")" class="btn btn-primary btn-lg" style="background-color: #0db55d" ; border-bottom-color: white; ">Leer más &raquo;</a></p>
 </div>
 
 <div class="row">
@@ -13,18 +16,14 @@
         <h2>Iniciar Sesión</h2>
         <table>
         <tr>
-            <td>Ya tienes un usuario creado?</td>
-        </tr>
-        <tr>
-            <td class="btn btn-default" style="background-color: #1FACB6; color: #FFFFFF;"><a href="@Url.Action("IniciarSesion","Home")">Inicia sesión &lArr;</a></td>
+            <p><a href="@Url.Action("IniciarSesion","Home")" class="btn btn-primary btn-lg" style="background-color: #0db55d" ; border-bottom-color: white; ">Iniciar sesión &raquo;</a></p>
         </table>
     </div>
     <div class="col-md-4">
         <h2>Registrar usuario</h2>
         <table>
-        <tr><td>Aun no te has registrado?</td></tr>
         <tr>
-            <td class="btn btn-default" style="background-color: #1FACB6; color: #ffffff"><a href="@Url.Action("Registrar","Home")">Registrate aquí &lArr;</a></td>
+            <p><a href="@Url.Action("Registrar","Home")" class="btn btn-primary btn-lg" style="background-color: #0db55d"; border-bottom-color: white; ">Registrate aquí &raquo;</a></p>
         </tr>
         </table>
 
