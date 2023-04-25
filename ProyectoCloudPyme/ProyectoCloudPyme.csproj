@@ -135,7 +135,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cerradodesesion.css" />
-    <Content Include="Content\Estilos.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -165,11 +165,14 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Registrar.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\IniciarSesion.cshtml" />
     <Content Include="Views\Home\PaginaUsuario.cshtml" />
     <Content Include="Views\Home\CrearPyme.cshtml" />
+    <Content Include="Views\Shared\_LayoutPagina.cshtml" />
+    <Content Include="Views\Home\MostrarLinkAlimentos.cshtml" />
+    <Content Include="Views\Home\MostrarLinkComercio.cshtml" />
+    <Content Include="Views\Home\MostrarLinkTransporte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

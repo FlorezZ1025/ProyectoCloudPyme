@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,20 +22,51 @@ namespace ProyectoCloudPyme.Controllers
 
             return View();
         }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         public ActionResult Registrar()
         {
             return View();
-    
         }
 
+        public ActionResult MostrarLinkAlimentos()
+        {
+            return View();
+        }
+
+        public ActionResult MostrarLinkComercio()
+        {
+            return View();
+        }
+
+        public ActionResult MostrarLinkTransporte()
+        {
+            return View();
+        }
+
+        public ActionResult MostrarLinks()
+        {
+            string tipoPyme = Request.Form["tipoPyme"];
+            if(tipoPyme == "Alimentos")
+            {
+                return RedirectToAction("MostrarLinkAlimentos");
+            }
+            else if(tipoPyme == "Comercio")
+            {
+                return RedirectToAction("MostrarLinkComercio");
+            }
+            else if(tipoPyme == "")
+            {
+
+                return RedirectToAction("MostrarLinkTransporte");
+            }
+            return RedirectToAction("crearPyme");
+
+
+        }
+
+        public ActionResult CrearPyme()
+        {
+            return View();
+        }
         public ActionResult PaginaUsuario()
         {
             string email = (string)TempData["email"];
@@ -54,8 +86,8 @@ namespace ProyectoCloudPyme.Controllers
             if (mipagina.EstaRegistrado(email) && mipagina.ContraValida(contraseña))
             {
                 TempData["email"] = email;
-                TempData.Keep("email");
                 TempData["contraseña"] = contraseña;
+                TempData.Keep("email");
                 TempData.Keep("contraseña");
 
                 //Usuario usuario = mipagina.TraerUsuario(email, contraseña);

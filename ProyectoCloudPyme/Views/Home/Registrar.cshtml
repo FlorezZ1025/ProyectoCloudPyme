@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Registrar Usuario</title>
-    <link rel="stylesheet" href="~/Content/Estilos.css" />
+    <link rel="stylesheet" href="~/Content/style.css" />
 
 </head>
 <body>
@@ -17,7 +17,7 @@
             <form action="Usuario/Usuario" method="post">
                 <table>
                     <tr>
-                        <td><label>Identificación:</label></td>
+                        <td><label>Identificación</label></td>
                         <td><input type="text" name="id" pattern="[0-9]+" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" autocomplete="off" value="" /></td>
                     </tr>
                     <tr>
@@ -41,11 +41,13 @@
                         <td><input type="text" name="email" value="" autocomplete="off" required /></td>
                     </tr>
                     <tr>
-                        <td><label>Nueva contraseña </label></td>
-                        <td><input type="text" name="contraseña" value="" autocomplete="off" maxlength="15" required /></td>
+                        <td><label>Contraseña </label></td>
+                        <td><input type="text" name="contraseña" value="" autocomplete="off" minlength="6" maxlength="15" required /></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" name="Guardar" value="Guardar" /></td>
+                        <td></td>
+                        <td><input type="submit" name="Guardar" value="Guardar" style=" width: 150px;" /></td>
+
                     </tr>
                 </table>
             </form>

@@ -1,7 +1,42 @@
 ﻿
 @{
-    ViewBag.Title = "CrearPyme";
+    ViewBag.Title = "Creacion de Pyme";
+    Layout = "~/Views/Shared/_LayoutPagina.cshtml";
+
 }
 
-<h2>CrearPyme</h2>
+<html>
+<head>
+    <title>Aquí te diremos los pasos para crear tu Pyme</title>
+    <link rel="stylesheet" href="~/Content/style.css" />
+</head>
+
+<body>
+    <h3>Aquí te diremos los pasos para crear tu Pyme</h3>
+    <div>
+        @using (Html.BeginForm("MostrarLinks", "Home", FormMethod.Post))
+        {
+        <form action="Usuario/Usuario" method="post">
+            <table>
+                <tr>
+                    <td><label>Selecciona el tipo de Pyme</label></td>
+                    <td>
+                        <select name="tipoPyme" id="tipoPyme" style="width:300px">
+                            <option value="--">--</option>
+                            <option value="Alimentos">Alimentos</option>
+                            <option value="Comercio">Comercio</option>
+                            <option value="Transporte">Transporte</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="Continuar"></td>
+                </tr>
+            </table>
+        </form>
+        }
+    </div>
+</body>
+</html>
+
 

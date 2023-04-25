@@ -25,7 +25,10 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Registrar usuario", "Registrar", "Home")</li>
-                   
+                  
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>

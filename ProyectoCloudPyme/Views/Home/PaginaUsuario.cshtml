@@ -1,15 +1,17 @@
 ﻿@model ProyectoCloudPyme.Models.Usuario
 @{
     ViewBag.Title = "Pagina principal";
+    Layout = "~/Views/Shared/_LayoutPagina.cshtml";
 }
 
 <h2> </h2>
 <html>
 <head>
-    <title>Bienvenido @Model.Nombre</title>
-    <link rel="stylesheet" href="~/Content/Estilos.css">
+    <title></title>
+    <link rel="stylesheet" href="~/Content/style.css" />
 </head>
 <body>
+    <h1>Bienvenido @Model.Nombre</h1>
     <div>
         <h3>Tus pymes</h3>
         @using (Html.BeginForm("CrearPyme", "Home", FormMethod.Post))
@@ -18,7 +20,7 @@
             <table>
                 <tr>
                     <td><label>¿Quieres crear una pyme?</label></td>
-                    <td><input type="submit" name="Crear" value="CrearPyme"></td>
+                    <td><input type="submit" name="Crear" value="Crear Pyme"></td>
                 </tr>
             </table>
             </form>
