@@ -67,8 +67,6 @@ namespace ProyectoCloudPyme.Controllers
                 return RedirectToAction("MostrarLinkTransporte");
             }
             return RedirectToAction("crearPyme");
-
-
         }
 
         public ActionResult CrearPyme()
