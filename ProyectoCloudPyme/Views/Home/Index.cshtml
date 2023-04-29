@@ -1,7 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <head>
     <link rel="stylesheet" href="~/Content/style.css" />
 </head>
@@ -13,18 +12,18 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>&clubs;</h2>
+        <h2>Iniciar Sesión</h2>
         <table>
-        <tr>
-            <p><a href="@Url.Action("IniciarSesion","Home")" class="btn btn-primary btn-lg" style="background-color: #0db55d ; border-bottom-color: white;">Iniciar sesión &raquo;</a></p>
+            <tr>
+                <p><a href="@Url.Action("InicioDeSesion","Home")" class="btn btn-primary btn-lg" style="background-color: #0db55d ; border-bottom-color: white;">Iniciar sesión &raquo;</a></p>
         </table>
     </div>
     <div class="col-md-4">
         <h2>No tienes cuenta?</h2>
         <table>
-        <tr>
-            <p><a href="@Url.Action("Registrar","Home")" class="btn btn-primary btn-lg" style="background-color: #0db55d; border-bottom-color: white; ">Registrate aquí &raquo;</a></p>
-        </tr>
+            <tr>
+                <p><a href="@Url.Action("Registrar","Home")" class="btn btn-primary btn-lg" style="background-color: #0db55d; border-bottom-color: white; ">Registrate aquí &raquo;</a></p>
+            </tr>
         </table>
 
     </div>

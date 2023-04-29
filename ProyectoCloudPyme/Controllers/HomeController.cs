@@ -15,6 +15,14 @@ namespace ProyectoCloudPyme.Controllers
         {
             return View();
         }
+        public ActionResult BienvenidaUsuario()
+        {
+            return View();  
+        }
+
+        public ActionResult InicioDeSesion() {
+            return View();
+        }
 
         public ActionResult About()
         {
@@ -97,7 +105,7 @@ namespace ProyectoCloudPyme.Controllers
                 
             }
             //aqui va un alert
-            return RedirectToAction("iniciarSesion");
+            return RedirectToAction("inicioDeSesion");
         }
 
         public ActionResult capturardatosRegistro() 

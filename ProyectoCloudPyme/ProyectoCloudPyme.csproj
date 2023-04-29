@@ -136,6 +136,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cerradodesesion.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\StyleView2.css" />
+    <Content Include="Content\StyleView1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -173,6 +175,8 @@
     <Content Include="Views\Home\MostrarLinkAlimentos.cshtml" />
     <Content Include="Views\Home\MostrarLinkComercio.cshtml" />
     <Content Include="Views\Home\MostrarLinkTransporte.cshtml" />
+    <Content Include="Views\Home\BienvenidaUsuario.cshtml" />
+    <Content Include="Views\Home\InicioDeSesion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

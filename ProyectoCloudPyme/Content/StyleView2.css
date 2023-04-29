@@ -1,0 +1,98 @@
+﻿
+
+body,html {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    background-image: url("https://images.pexels.com/photos/7109/laptop-notebook-clean-hero.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    height: 100vh
+}
+
+.left {
+}
+
+.right {
+    background: linear-gradient(#144C7E,#213F54);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh
+
+}form{
+     display:flex;
+     flex-direction:column;
+     text-align:center;
+     padding:20px 25px;
+     box-shadow:0 5px 10px #333;
+ }
+
+.right h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #F6F0E9;
+}
+
+    .right p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #999;
+    }
+
+.right a {
+    margin-top:15px;
+    font-weight: bold;
+    color: #F6F0E9;
+    font-size: 21px;
+    margin-bottom:15px;
+    border-radius:5px;
+    text-decoration: none;
+}
+.right label {
+        margin-bottom: 35px;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .right input[type="text"],
+    .right input[type="password"] {
+        margin-left:8px;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+.right input[type="submit"] {
+    border-radius: 5px;
+    border-width: 0;
+    width: 60%;
+    color: #F6F0E9;
+    font-size: 21px;
+    background-color: #0F5F54;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #333333;
+    box-shadow: 1px 1px 1px #333333;
+}
+
+        .right input[type="submit"]:hover {
+            background-color: #3d8ac9;
+        }
+
+    .right input[type="text"]:focus,
+    .right input[type="password"]:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px 0px rgba(30, 107, 162, 0.5);
+        border: 1px solid #1e6ba2;
+    }
