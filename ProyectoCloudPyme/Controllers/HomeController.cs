@@ -122,12 +122,9 @@ namespace ProyectoCloudPyme.Controllers
 
             mipagina.AgregarUsuario(usuario);
 
-            return RedirectToAction("IniciarSesion");
+            return RedirectToAction("InicioDeSesion");
         }
-        public ActionResult IniciarSesion()
-        {
-            return View();
-        }
+
 
     }
 
