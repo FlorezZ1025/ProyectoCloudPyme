@@ -1,57 +1,62 @@
 ﻿@{
     ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_LayoutCloudPyme.cshtml";
 }
 <html>
 <head>
     <title>Registrar Usuario</title>
-    <link rel="stylesheet" href="~/Content/style.css" />
+    <link rel="stylesheet" href="~/Content/StyleViewRegistro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+
+    </style>
 
 </head>
 <body>
-    <div>
-        <h3>REGISTRAR USUARIO</h3>
-
-
+    <div class="container" id="formulario">
         @using (Html.BeginForm("capturardatosRegistro", "Home", FormMethod.Post))
         {
-            <form action="Usuario/Usuario" method="post">
-                <table>
-                    <tr>
-                        <td><label>Identificación</label></td>
-                        <td><input type="text" name="id" pattern="[0-9]+" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" autocomplete="off" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Nombre </label></td>
-                        <td><input type="text" name="nombre" pattern="[a-zA-Z.,:;()¿?¡! ñ]+" autocomplete="off" required /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Primer Apellido</label></td>
-                        <td><input type="text" name="apellido_1" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Segundo Apellido</label></td>
-                        <td><input type="text" name="apellido_2" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Fecha nacimiento</label></td>
-                        <td><input type="date" name="fh_nacimiento" value="" style=" width: 300px;" /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Email</label></td>
-                        <td><input type="text" name="email" value="" autocomplete="off" required /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Contraseña </label></td>
-                        <td><input type="text" name="contraseña" value="" autocomplete="off" minlength="6" maxlength="15" required /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit" name="Guardar" value="Guardar" style=" width: 150px;" /></td>
+            <h1>| Registro de nuevo usuario</h1>
+            <table style="border-collapse: separate; border-spacing: 20px;">
+                <tr>
+                    <td><i class="fa-solid fa-fingerprint" style="color: #0F5F54;"></i></td>
+                    <td><input placeholder="Identificacion" type="text" name="id" pattern="[0-9]+" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" autocomplete="off" required /></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-person-walking" style="color: #0F5F54;"></i></td>
+                    <td><input placeholder="Nombre" type="text" name="nombre" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off"  required /></td>
 
-                    </tr>
-                </table>
-            </form>
-        }
+                </tr>
+                <tr>
+                    <td style="color: #0F5F54; font-size:25px" >&rArr;</td>
+                    <td><input placeholder="Primer apellido" type="text" name="apellido_1" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required/></td>
+                </tr>
+                <tr>
+                    <td style="color: #0F5F54; font-size: 25px">&rArr;</td>
+                    <td><input placeholder="Segundo apellido" type="text" name="apellido_2" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required/></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-cake-candles" style="color: #0F5F54;"></i></td>
+                    <td><input  type="date" name="fh_nacimiento" value="" /></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-sharp fa-regular fa-envelope" style="color: #0F5F54;"></i></td>
+                    <td><input placeholder="Correo electrónico" type="text" name="email" autocomplete="off" maxlength="25" required /></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-lock" style="color: #0F5F54;"></i></td>
+                    <td><input placeholder="Contraseña" type="password" name="contraseña" value="" autocomplete="off" minlength="6" maxlength="15" required /></td>
+                </tr>
+
+            </table>
+            <div style="text-align: center;">
+                <input type="submit" value="Registrar">
+            </div>
+            }
     </div>
+
+    
+
 </body>
 </html>
