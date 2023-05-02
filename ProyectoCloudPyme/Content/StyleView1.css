@@ -5,7 +5,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     background: linear-gradient(#144C7E,#213F54);
     height: 100vh
 }

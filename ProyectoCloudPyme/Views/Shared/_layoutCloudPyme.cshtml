@@ -9,14 +9,21 @@
     @Scripts.Render("~/bundles/modernizr")
     <style>
         body {
-            background-color: #070d59;
+            background: linear-gradient(to bottom, #f6f0e9, #8cc84b);
             color: white;
             font-weight: bold;
         }
 
         .navbar-inverse {
-            background: linear-gradient(#0B2C48, #1A2535);
-            border-color: #0e1a6c;
+            background: rgba(16, 31, 41, 0.9);
+            border-bottom: transparent;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            height: 9%;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-header {
+          
         }
 
             .navbar-inverse .navbar-brand {
@@ -47,8 +54,10 @@
 
         footer {
             color: black;
+            font-size:10px;
             text-align: left;
             margin-top: 20px;
+            margin-bottom:20px;
         }
         .container{
             
@@ -71,7 +80,7 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr style="border-color:black" />
+       
         <footer>
             <p>&copy; @DateTime.Now.Year - CloudPyme</p>
         </footer>
