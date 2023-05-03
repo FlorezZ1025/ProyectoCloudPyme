@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Security;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace ProyectoCloudPyme.Controllers
 {
@@ -96,14 +98,18 @@ namespace ProyectoCloudPyme.Controllers
                 TempData.Keep("email");
                 TempData.Keep("contraseña");
 
-                //Usuario usuario = mipagina.TraerUsuario(email, contraseña);
-                  
-                    //aqui va un alert
+                TempData["AlertMessage"] = null;
+                //aqui va un alert
+
                 return RedirectToAction("PaginaUsuario");
                 
             }
+
+            TempData["AlertMessage"] = "No se encontró el usuario";
+            TempData["AlertType"] = "error";
+  
             //aqui va un alert
-            return RedirectToAction("inicioDeSesion");
+            return RedirectToAction("InicioDeSesion");
         }
 
         public ActionResult capturardatosRegistro() 

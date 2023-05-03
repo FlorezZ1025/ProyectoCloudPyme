@@ -11,12 +11,14 @@
 }
 
 .left {
+
 }
 
 .right {
     display:flex;
     place-items:center;
     text-align:center;
+    margin-right:25px;
 }
     .right h1 {
         color: #F6F0E9; font-size:50px;}
@@ -39,3 +41,9 @@
         text-shadow: 1px 1px 1px #333333;
         box-shadow: 1px 1px 1px #333333;
     }
+img{
+    width:30px;
+    height:25px;
+    margin-top:50px;
+    margin-right:20px;
+}
