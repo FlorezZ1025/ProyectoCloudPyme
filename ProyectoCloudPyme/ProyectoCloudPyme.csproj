@@ -122,6 +122,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alimento.cs" />
+    <Compile Include="Models\Transporte.cs" />
+    <Compile Include="Models\Comercio.cs" />
     <Compile Include="Models\Pagina.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Pyme.cs" />
@@ -176,6 +179,7 @@
     <Content Include="Views\Home\BienvenidaUsuario.cshtml" />
     <Content Include="Views\Home\InicioDeSesion.cshtml" />
     <Content Include="Views\Shared\_layoutCloudPyme.cshtml" />
+    <Content Include="Views\Shared\_LayoutCloudPymeSesion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

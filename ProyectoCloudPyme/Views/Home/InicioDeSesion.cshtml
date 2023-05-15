@@ -26,12 +26,15 @@
     @if (TempData["AlertMessage"] != null)
     {
         <script>
+
             Swal.fire({
-                "title": '@TempData["AlertMessage"]',
-                "icon": '@TempData["AlertType"]'
+                "title": 'No se encontro el usuario',
+                "icon": 'error'
             });
+
         </script>
     }
+
 
 </head>
 <body>

@@ -14,6 +14,7 @@ namespace ProyectoCloudPyme.Models
         private DateTime fhnacimiento;
         private string   email;
         private string   contraseña;
+        public List<Pyme> Pymes { get; set; }
 
         public Usuario(int id, string nombre, string apellido_1, string apellido_2, DateTime fhnacimiento, string email, string contraseña )
         {
@@ -24,6 +25,7 @@ namespace ProyectoCloudPyme.Models
             this.Fhnacimiento = fhnacimiento;
             this.Email        = email;
             this.Contraseña   = contraseña;
+            this.Pymes        = new List<Pyme>();
         }
 
         public int Id { get => id; set => id = value; }
@@ -34,4 +36,8 @@ namespace ProyectoCloudPyme.Models
         public string Email { get => email; set => email = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
     }
+
+
+
+
 }

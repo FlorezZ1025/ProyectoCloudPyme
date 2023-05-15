@@ -107,7 +107,11 @@ namespace ProyectoCloudPyme.Controllers
 
             TempData["AlertMessage"] = "No se encontró el usuario";
             TempData["AlertType"] = "error";
-  
+
+            TempData.Keep("AlertMessage");
+            TempData.Keep("ALertType");
+
+
             //aqui va un alert
             return RedirectToAction("InicioDeSesion");
         }
