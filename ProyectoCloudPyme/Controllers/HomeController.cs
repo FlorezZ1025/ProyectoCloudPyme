@@ -13,12 +13,18 @@ namespace ProyectoCloudPyme.Controllers
     public class HomeController : Controller
     {
         Pagina mipagina = new Pagina();
+        int cont = 0;
         public ActionResult Index()
         {
             return View();
         }
         public ActionResult BienvenidaUsuario()
         {
+            if (cont == 0)
+            {
+                cont = 1;
+                mipagina.UsuarioAleatorio();
+            }
             return View();  
         }
 
@@ -33,6 +39,10 @@ namespace ProyectoCloudPyme.Controllers
             return View();
         }
         public ActionResult Registrar()
+        {
+            return View();
+        }
+        public ActionResult EditarUsuario()
         {
             return View();
         }
@@ -109,7 +119,7 @@ namespace ProyectoCloudPyme.Controllers
             TempData["AlertType"] = "error";
 
             TempData.Keep("AlertMessage");
-            TempData.Keep("ALertType");
+            TempData.Keep("AlertType");
 
 
             //aqui va un alert
@@ -131,6 +141,11 @@ namespace ProyectoCloudPyme.Controllers
             mipagina.AgregarUsuario(usuario);
 
             return RedirectToAction("InicioDeSesion");
+        }
+
+        public ActionResult ElegirPyme() 
+        {
+            return View();
         }
 
 

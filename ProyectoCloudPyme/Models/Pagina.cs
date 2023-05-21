@@ -52,6 +52,12 @@ namespace ProyectoCloudPyme.Models
             return null;
         }
         
+        public void UsuarioAleatorio()
+        {
+            Usuario usuario_x = new Usuario(1025880581,"Santiago","Arango","Florez", DateTime.Parse("04/02/2004"), "sanaraflorez@gmail.com","123456");
+            usuarios.Add(usuario_x);
+        
+        }
 
     }
 }

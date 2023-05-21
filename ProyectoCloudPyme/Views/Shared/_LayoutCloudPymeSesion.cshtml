@@ -9,9 +9,12 @@
     @Scripts.Render("~/bundles/modernizr")
     <style>
         body {
-            background: linear-gradient(to bottom, #f6f0e9, #8cc84b);
+            background: linear-gradient(to bottom, #ffffff, #f1f1f1);
             color: white;
             font-weight: bold;
+            height: 100vh;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .navbar-inverse {
@@ -48,10 +51,13 @@
 
         .body-content {
             padding-top: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 0;
+            padding-left:0;
+            padding-right:0;
         }
 
         footer {
+            background: linear-gradient(to bottom, #ffffff, #f1f1f1);
             color: black;
             font-size: 10px;
             text-align: left;
@@ -60,6 +66,8 @@
         }
 
         .container {
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .container-fluid {
@@ -71,12 +79,13 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("CloudPyme", "BienvenidaUsuario", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("CloudPyme", "PaginaUsuario", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("BienvenidaUsuario", "Home")"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesión</a></li>
+                    <li><a href="@Url.Action("EditarUsuario", "Home")"><span class="glyphicon glyphicon-cog" style="font-size:24px"></span> </a></li>
+                    <li><a href="@Url.Action("BienvenidaUsuario", "Home")"><span class="glyphicon glyphicon-log-out" style="font-size:24px"></span> </a></li>
                 </ul>
             </div>
         </div>

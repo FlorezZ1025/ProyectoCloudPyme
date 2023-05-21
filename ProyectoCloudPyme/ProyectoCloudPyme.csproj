@@ -137,6 +137,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cerradodesesion.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\StyleViewElegirPyme.css" />
+    <Content Include="Content\StyleViewPagina.css" />
     <Content Include="Content\StyleViewRegistro.css" />
     <Content Include="Content\StyleView2.css" />
     <Content Include="Content\StyleView1.css" />
@@ -169,7 +171,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Registrar.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\PaginaUsuario.cshtml" />
     <Content Include="Views\Home\CrearPyme.cshtml" />
     <Content Include="Views\Shared\_LayoutPagina.cshtml" />
@@ -180,6 +181,8 @@
     <Content Include="Views\Home\InicioDeSesion.cshtml" />
     <Content Include="Views\Shared\_layoutCloudPyme.cshtml" />
     <Content Include="Views\Shared\_LayoutCloudPymeSesion.cshtml" />
+    <Content Include="Views\Home\EditarUsuario.cshtml" />
+    <Content Include="Views\Home\ElegirPyme.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
