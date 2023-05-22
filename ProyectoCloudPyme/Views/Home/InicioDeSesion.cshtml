@@ -27,6 +27,9 @@
 
         @if (TempData["AlertMessage"] != null)
         {
+
+
+            TempData["AlertMessage"] = null;
             <script>
 
                 Swal.fire({
@@ -35,7 +38,7 @@
                 });
 
             </script>
-    }
+        }
 
 
 </head>
