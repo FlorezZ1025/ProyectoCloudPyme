@@ -138,6 +138,7 @@
     <Content Include="Content\Cerradodesesion.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\StyleViewElegirPyme.css" />
+    <Content Include="Content\StyleViewGuias.css" />
     <Content Include="Content\StyleViewPagina.css" />
     <Content Include="Content\StyleViewRegistro.css" />
     <Content Include="Content\StyleView2.css" />
@@ -174,9 +175,9 @@
     <Content Include="Views\Home\PaginaUsuario.cshtml" />
     <Content Include="Views\Home\CrearPyme.cshtml" />
     <Content Include="Views\Shared\_LayoutPagina.cshtml" />
-    <Content Include="Views\Home\MostrarLinkAlimentos.cshtml" />
-    <Content Include="Views\Home\MostrarLinkComercio.cshtml" />
-    <Content Include="Views\Home\MostrarLinkTransporte.cshtml" />
+    <Content Include="Views\Home\GuiaPymeAlimentos.cshtml" />
+    <Content Include="Views\Home\GuiaPymeComercio.cshtml" />
+    <Content Include="Views\Home\GuiaPymeTransporte.cshtml" />
     <Content Include="Views\Home\BienvenidaUsuario.cshtml" />
     <Content Include="Views\Home\InicioDeSesion.cshtml" />
     <Content Include="Views\Shared\_layoutCloudPyme.cshtml" />

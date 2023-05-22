@@ -3,11 +3,25 @@
     padding: 0;
     font-family: sans-serif;
     height: 100%;
-}.Pymes{
-     margin-top:100px;
-     display:block;
-     justify-content:center;
- }
+}
+.mia {
+    text-decoration: none;
+    color: #F6F0E9;
+    background-color: #0F5F54;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 250px;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 25px;
+    text-shadow: 1px 1px 1px #333333;
+    box-shadow: 1px 1px 1px #333333;
+}
+
+
 
 
 h3 {
@@ -16,11 +30,10 @@ h3 {
     font-weight: bold;
 }
 h4 {
-    margin-top:20px;
-    font-family: "Arial", sans-serif;
+    margin-top: 50px;
+    font-family: "Montserrat", sans-serif;
     font-size: 34px; /* Tamaño de fuente */
     font-weight: bold; /* Grosor de fuente */
     color: #333; /* Color de texto */
     text-align: center; /* Alineación de texto */
-
 }

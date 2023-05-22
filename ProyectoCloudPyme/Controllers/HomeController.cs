@@ -47,17 +47,17 @@ namespace ProyectoCloudPyme.Controllers
             return View();
         }
 
-        public ActionResult MostrarLinkAlimentos()
+        public ActionResult GuiaPymeAlimentos()
         {
             return View();
         }
 
-        public ActionResult MostrarLinkComercio()
+        public ActionResult GuiaPymeComercio()
         {
             return View();
         }
 
-        public ActionResult MostrarLinkTransporte()
+        public ActionResult GuiaPymeTransporte()
         {
             return View();
         }

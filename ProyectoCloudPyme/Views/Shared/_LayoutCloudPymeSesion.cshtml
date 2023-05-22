@@ -8,13 +8,18 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+            background-color: #f7f7f7;
             color: white;
             font-weight: bold;
+            display: flex;
+            flex-direction: column;
             height: 100vh;
-            padding-left: 0;
-            padding-right: 0;
         }
 
         .navbar-inverse {
@@ -50,19 +55,18 @@
             }
 
         .body-content {
+            flex: 1;
             padding-top: 20px;
             padding-bottom: 0;
-            padding-left:0;
-            padding-right:0;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         footer {
-            background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+            
             color: black;
             font-size: 10px;
             text-align: left;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
 
         .container {
@@ -80,22 +84,21 @@
         <div class="container">
             <div class="navbar-header">
                 @Html.ActionLink("CloudPyme", "PaginaUsuario", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="@Url.Action("EditarUsuario", "Home")"><span class="glyphicon glyphicon-cog" style="font-size:24px"></span> </a></li>
                     <li><a href="@Url.Action("BienvenidaUsuario", "Home")"><span class="glyphicon glyphicon-log-out" style="font-size:24px"></span> </a></li>
                 </ul>
+
+
+
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year - CloudPyme</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

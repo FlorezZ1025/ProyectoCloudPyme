@@ -9,24 +9,37 @@
     <title>Aquí te diremos los pasos para crear tu Pyme</title>
     <link rel="stylesheet" href="~/Content/StyleViewElegirPyme.css" />
     <style>
-        .mia {
+
+        .mia:hover {
             color: #F6F0E9;
-            background-color: #0F5F54;
-            text-align: center;
-            justify-content: center;
-            display: flex;
-            
-            margin-top: 30px;
-            border-radius: 5px;
-            width: 250px;
-            font-weight: bold;
-            font-size: 18px;
-            padding: 25px;
             text-decoration: none;
-            text-shadow: 1px 1px 1px #333333;
-            box-shadow: 1px 1px 1px #333333;
+            background-color: #3d8ac9;
         }
 
+        #pymes {
+            margin-top: 150px;
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+            flex-wrap:wrap;
+            align-items:center;
+            align-content:center;
+            
+        }
+        .pyme-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .pyme-item a {
+                margin-right: 10px;
+            }
+        .extra {
+            font-size: 18px;
+            color: #0F5F54;
+            margin-right:5px;
+        }
     </style>
     
 </head>
@@ -35,19 +48,16 @@
 
     <h4 style="color:black">Primero debes escoger el tipo de Pyme</h4>
 
-    <div class="Pymes" id="pymes" style="justify-content:center;align-items:center">
-        <div id="d1">
-            <a class="mia" style="margin-left: 500px; " href="@Url.Action("","Home")">Alimentos</a>
+    <div class="Pymes" id="pymes">
+        <div class="pyme-item">
+            <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeAlimentos","Home")">Alimentos</a><span class="extra">&laquo;</span>
         </div>
-        <div id="d2">
-            <a class="mia" style="margin-left: 500px; " href="@Url.Action("","Home")">Transporte</a>
+        <div class="pyme-item">
+            <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeTransporte","Home")">Transporte</a><span class="extra">&laquo;</span>
         </div>
-        <div id="d3">
-            <a class="mia" style="margin-left: 500px; " href="@Url.Action("","Home")">Comercio</a>
+        <div class="pyme-item">
+            <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeComercio","Home")">Comercio</a><span class="extra">&laquo;</span>
         </div>
-
-
-
     </div>
 
 
