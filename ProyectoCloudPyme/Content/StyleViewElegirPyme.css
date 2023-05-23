@@ -30,10 +30,18 @@ h3 {
     font-weight: bold;
 }
 h4 {
+    /*
     margin-top: 50px;
     font-family: "Montserrat", sans-serif;
-    font-size: 34px; /* Tamaño de fuente */
-    font-weight: bold; /* Grosor de fuente */
-    color: #333; /* Color de texto */
-    text-align: center; /* Alineación de texto */
+    font-size: 34px; 
+    font-weight: bold; 
+    color: #000000;*/
+    text-align: center;
+    color: #312e2e;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }

@@ -17,7 +17,7 @@
         }
 
         #pymes {
-            margin-top: 150px;
+            margin-top: 100px;
             display: flex;
             flex-direction:column;
             justify-content:center;
@@ -40,23 +40,32 @@
             color: #0F5F54;
             margin-right:5px;
         }
+        .contenedorsin {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 35px;
+            box-shadow: 0 5px 10px #333;
+        }
     </style>
     
 </head>
 
 <body>
 
-    <h4 style="color:black">Primero debes escoger el tipo de Pyme</h4>
+    <h4>Primero debes escoger el tipo de Pyme</h4>
 
     <div class="Pymes" id="pymes">
-        <div class="pyme-item">
-            <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeAlimentos","Home")">Alimentos</a><span class="extra">&laquo;</span>
-        </div>
-        <div class="pyme-item">
-            <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeTransporte","Home")">Transporte</a><span class="extra">&laquo;</span>
-        </div>
-        <div class="pyme-item">
-            <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeComercio","Home")">Comercio</a><span class="extra">&laquo;</span>
+        <div class="contenedorsin">
+            <div class="pyme-item">
+                <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeAlimentos","Home")">Alimentos</a><span class="extra">&laquo;</span>
+            </div>
+            <div class="pyme-item">
+                <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeTransporte","Home")">Transporte</a><span class="extra">&laquo;</span>
+            </div>
+            <div class="pyme-item">
+                <span class="extra">&raquo;</span><a class="mia" href="@Url.Action("GuiaPymeComercio","Home")">Comercio</a><span class="extra">&laquo;</span>
+            </div>
         </div>
     </div>
 

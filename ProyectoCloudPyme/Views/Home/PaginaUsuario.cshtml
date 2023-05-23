@@ -9,34 +9,93 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="~/Content/StyleViewPagina.css" />
+    <style>
+        #pantalla-dividida {
+            display: flex;
+            flex-direction: column;
+            height:100vh;
+        }
+
+        #pantalla-dividida div:nth-of-type(1) {
+            flex-grow: 1;
+            display: flex;
+         
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        #pantalla-dividida div:nth-of-type(2) {
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            flex-wrap:nowrap;
+
+        }
+        #pantalla-dividida div:nth-of-type(3) {
+            flex-grow: 1;
+            background-color: #C7E6D7;
+            display: flex;
+            flex-direction: column;
+        }
+   
+        .pregunta {
+            font-family: "Arial", sans-serif;
+            color: #333333;
+            font-weight: bold;
+            font-size: 32px;
+            text-align: center;
+        }
+
+
+        #texplico {
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #F6F0E9;
+            font-size: 18px;
+            background-color: #0F5F54;
+            text-decoration: none;
+            padding: 15px;
+            text-shadow: 1px 1px 1px #333333;
+            box-shadow: 1px 1px 1px #333333;
+        }
+        #UsuariosTable {
+            max-width: 800px; /* Ajusta el valor según tus necesidades */
+            margin: 0 auto; /* Centra horizontalmente el contenedor */
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Bienvenido @Model.Nombre</h1>
   
-    <section id="pantalla-dividida">
-        <div class="left" style=" background-color: #C7E6D7; width:800px">
-            <div class="content">
-                <h1>¿Quieres agregar una Pyme?</h1>
-                <a id="texplico" href="@Url.Action("ElegirPyme","Home")">Aquí te explicamos cómo crearla</a>
-            </div>
+    <div id="pantalla-dividida">
+        <div>
+            <h1>Bienvenido <span style="font-weight:bold">@Model.Nombre</span></h1>
         </div>
-        <div class="right" style="width:300px" >
-            @if (Model.Pymes.Count == 0)
+        <div >
+            @if (Model.Pymes.Count() == 0)
             {
-                <table style="margin-left:50px; margin-right:20px;">
+                <div id="UsuariosTable">
+                <table>
                     <tr>
                         <td colspan="2" style="text-align:center; justify-content:center">Todavía no tienes Pymes agregadas</td>
                     </tr>
                  
                 </table>
-            }
+                </div>
+                    }
             else
             {
-                <table id="UsuariosTable">
+            <div id="UsuariosTable">
+                <table >
                     <thead>
                         <tr>
                             <th colspan="2" style="text-align:center; justify-content:center">Tus Pymes</th>
-                         
+
                         </tr>
                     </thead>
                     <tbody>
@@ -49,10 +108,20 @@
                         }
                     </tbody>
                 </table>
+            </div>
             }
         </div>
-    </section>
-  
+        <div>
+            <div class="preguntas">
+                <h2>hola</h2>
+                <h2>Adios</h2>
+            </div>
+            <div class="enlaces">
+                <a href="#">Aqui te explicamos como crearla</a>
+                <a href="#">Aqui puedes añadir tu Pyme</a>
 
+            </div>
+        </div>
+    </div>
 </body>
 </html>

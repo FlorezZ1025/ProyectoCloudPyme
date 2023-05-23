@@ -1,43 +1,16 @@
 ﻿body, html {
-    margin-top: 20px;
+    margin:0;
     padding: 0;
     font-family: sans-serif;
     height: 100%;
 }
-#pantalla-dividida{
-    display:flex;
-}
-.left, .right {
-
-    flex-grow: 1;
-}
-.left {
-    width: 70%;
-    height: 100vh;
-    display: flex;
-    flex: 1;
-    border-right: solid 2px #0D4C43;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
 
-.right {
-    display: flex;
-    flex: 1;
-    margin-left: 0;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 30%;
-}
-
-h1 {
+#pantalla-dividida div:nth-of-type(1) h1 {
+    margin-top: 20px;
     font-family: "Arial", sans-serif;
     color: #333333;
-    font-weight: bold;
-    font-size: 32px;
+    font-size: 50px;
     text-align: center;
 }
 td {
@@ -45,27 +18,11 @@ td {
     color:#0D4C43
 }
 
-#texplico {
-    margin-top: 10px;
-    text-align:center;
-    justify-content:center;
-    display: flex;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #F6F0E9;
-    font-size: 18px;
-    background-color: #0F5F54;
-    text-decoration: none;
-    padding: 15px;
-    text-shadow: 1px 1px 1px #333333;
-    box-shadow: 1px 1px 1px #333333;
-}
+
 table {
 
     border-collapse: collapse;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    width:contain;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
