@@ -1,4 +1,5 @@
-﻿using ProyectoCloudPyme.Models;
+﻿using Microsoft.Ajax.Utilities;
+using ProyectoCloudPyme.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,15 @@ namespace ProyectoCloudPyme.Controllers
     {
         Pagina mipagina = new Pagina();
         int cont = 0;
-        public ActionResult Index()
+        public ActionResult SubirArchivos()
         {
+            if (TempData["message"] != null)
+            {
+                ViewBag.Message = TempData["message"].ToString();
+            }
             return View();
         }
+
         public ActionResult BienvenidaUsuario()
         {
             if (cont == 0)
@@ -61,24 +67,43 @@ namespace ProyectoCloudPyme.Controllers
         {
             return View();
         }
+        public ActionResult CapturarDatosPyme(){
 
-        public ActionResult MostrarLinks()
-        {
+            string email = (string)TempData["email"];
+            TempData.Keep("email");
+            string contraseña = (string)TempData["contraseña"];
+            TempData.Keep("contraseña");
+
+            Usuario usuario = mipagina.TraerUsuario(email, contraseña);
+
+            string nombrePyme = Request.Form["nombrePyme"];
+            string descripcion = Request.Form["Descripcion"];
             string tipoPyme = Request.Form["tipoPyme"];
-            if(tipoPyme == "Alimentos")
-            {
-                return RedirectToAction("MostrarLinkAlimentos");
-            }
-            else if(tipoPyme == "Comercio")
-            {
-                return RedirectToAction("MostrarLinkComercio");
-            }
-            else if(tipoPyme == "")
-            {
 
-                return RedirectToAction("MostrarLinkTransporte");
+            if (tipoPyme == "Comercio")
+            {
+                Comercio pymeComercio = new Comercio(nombrePyme,usuario, descripcion);
+                usuario.Pymes.Add(pymeComercio);
             }
-            return RedirectToAction("crearPyme");
+            else if (tipoPyme == "Transporte")
+            {
+                Transporte pymeTransporte = new Transporte(nombrePyme, usuario, descripcion);
+                usuario.Pymes.Add(pymeTransporte);
+            }
+            else
+            {
+                Alimento pymeAlimento = new Alimento(nombrePyme,usuario,descripcion);
+                usuario.Pymes.Add(pymeAlimento);
+            }
+
+            return RedirectToAction("SubirArchivos");
+        }
+
+        public ActionResult AccederSubirArchivos()
+        {
+
+            //También le puede pasar un usuario, atento
+            return View("~/Views/Archivo/SubirArchivos.cshtml");
         }
 
         public ActionResult CrearPyme()

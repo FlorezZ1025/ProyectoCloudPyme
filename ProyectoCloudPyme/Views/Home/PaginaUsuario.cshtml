@@ -34,11 +34,20 @@
             flex-wrap:nowrap;
 
         }
-        #pantalla-dividida div:nth-of-type(3) {
+        .contenedor {
             flex-grow: 1;
             background-color: #C7E6D7;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+        }
+        .left{
+
+         }
+        .right {
+            background-color: pink;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
         }
    
         .pregunta {
@@ -111,15 +120,14 @@
             </div>
             }
         </div>
-        <div>
-            <div class="preguntas">
-                <h2>hola</h2>
-                <h2>Adios</h2>
+        <div class="contenedor">
+            <div class="left" style="flex-grow:1">
+                <h1 class="pregunta" style="font-size:32px;">¿Quieres agregar una Pyme?</h1>
+                <a id="texplico" href="@Url.Action("ElegirPyme","Home")">Aquí te explicamos cómo crearla</a>
             </div>
-            <div class="enlaces">
-                <a href="#">Aqui te explicamos como crearla</a>
-                <a href="#">Aqui puedes añadir tu Pyme</a>
-
+            <div class="right" style="">
+                <h1 class="pregunta" style="font-size:32px;  ">¿Ya tienes todo listo?</h1>
+                <a id="texplico" href="@Url.Action("CrearPyme","Home") " style="text-align:center">Añade aquí tu <b>Pyme</b></a>
             </div>
         </div>
     </div>

@@ -74,3 +74,22 @@ input[type="submit"] {
     text-shadow: 1px 1px 1px #333333;
     box-shadow: 1px 1px 1px #33333333;
 }
+select {
+    padding: 9px;
+    border-radius: 0px;
+    color: black;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #0D4C43;
+    background-color: #C7E6D7;
+    width: 450px;
+}
+
+    select:hover {
+        border-color: #999;
+    }
+    select option {
+        color: #333333;
+        font-weight: bold;
+        background-color: #b2caaa;
+    }

@@ -55,7 +55,7 @@ input[type="text"], input[type="date"] {
 
 /* Estilos para los botones */
 input[type="submit"] {
-    background-color: #0f5030;
+    background-color: #0F5F54;
     border: none;
     color: #fff;
     padding: 10px 20px;
@@ -63,7 +63,7 @@ input[type="submit"] {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -76,13 +76,19 @@ form {
 select {
     padding: 5px;
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 10px;
     color: #352c2c;
     font-weight: bold;
-    background-color: #b2caaa;
+
+
+   
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #0D4C43;
+    background-color: #C7E6D7;
+
 }
 
     select option {

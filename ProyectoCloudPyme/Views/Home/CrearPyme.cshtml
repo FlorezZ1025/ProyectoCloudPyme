@@ -1,39 +1,82 @@
 ﻿
 @{
     ViewBag.Title = "Creacion de Pyme";
-    Layout = "~/Views/Shared/_LayoutPagina.cshtml";
+    Layout = "~/Views/Shared/_LayoutCloudPymeSesion.cshtml";
 
 }
 
 <html>
 <head>
     <title>Aquí te diremos los pasos para crear tu Pyme</title>
-    <link rel="stylesheet" href="~/Content/style.css" />
+    <link rel="stylesheet" href="~/Content/StyleViewRegistro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .documentos {
+            margin-top: 0;
+            display: flex;
+            background-size: cover;
+            height: 80%;
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        select {
+            padding: 9px;
+            border-radius: 0px;
+            color: black;
+            outline: none;
+            border: none;
+            border-bottom: solid 2px #0D4C43;
+            background-color: #C7E6D7;
+            width: 450px;
+        }
+
+            select:hover {
+                border-color: #999;
+            }
+
+            select option {
+                color: #333333;
+                font-weight: bold;
+                background-color: #b2caaa;
+            }
+    </style>
 </head>
 
 <body>
-    <h3>Aquí te diremos los pasos para crear tu Pyme</h3>
-    <div>
-        @using (Html.BeginForm("MostrarLinks", "Home", FormMethod.Post))
+
+    <h1 style="margin-top:70px" >| Registro de nueva Pyme</h1>
+    <div class="documentos" style="justify-content:center; align-items:center;">
+        @using (Html.BeginForm("CapturarDatosPyme", "Home", FormMethod.Post))
         {
-        <form action="Usuario/Usuario" method="post">
-            <table>
+            <table style="border-collapse: separate; border-spacing: 20px;">
+  
                 <tr>
-                    <td><label>Selecciona el tipo de Pyme</label></td>
+                    <td><i class="fa-sharp fa-solid fa-building" style="color: #0F5F54; font-size:25px"></i></td>
+                    <td><input placeholder="Nombre de la Pyme" type="text" name="nombrePyme" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required /></td>
+                </tr>
+                <tr>
+                    <td style="color: #0F5F54; font-size:25px">&rArr;</td>
+                    <td><input placeholder="Descripción" type="text" name="descripcion" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" required /></td>
+                </tr>
+                <tr>
+                    <td style="color: #0F5F54; font-size:25px">&rArr;</td>
                     <td>
-                        <select name="tipoPyme" id="tipoPyme" style="width:300px">
-                            <option value="--">--</option>
-                            <option value="Alimentos">Alimentos</option>
+                        <select name="tipoPyme" id="afiliacion" style=" width: 300px;" required>
                             <option value="Comercio">Comercio</option>
+                            <option value="Alimento">Alimento</option>
                             <option value="Transporte">Transporte</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><input type="submit" name="Continuar"></td>
-                </tr>
+
             </table>
-        </form>
+            <div style="text-align: center;">
+                <input type="submit" value="Registrar Pyme">
+            </div>
         }
     </div>
 </body>
