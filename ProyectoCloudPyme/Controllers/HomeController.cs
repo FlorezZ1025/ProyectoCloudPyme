@@ -50,7 +50,14 @@ namespace ProyectoCloudPyme.Controllers
         }
         public ActionResult EditarUsuario()
         {
-            return View();
+            string email = (string)TempData["email"];
+            TempData.Keep("email");
+            string contraseña = (string)TempData["contraseña"];
+            TempData.Keep("contraseña");
+
+            Usuario usuario = mipagina.TraerUsuario(email, contraseña);
+
+            return View(usuario);
         }
 
         public ActionResult GuiaPymeAlimentos()
@@ -171,6 +178,41 @@ namespace ProyectoCloudPyme.Controllers
         public ActionResult ElegirPyme() 
         {
             return View();
+        }
+
+        public ActionResult CapturarDatosEdicion()
+        {
+            string nombre = Request.Form["nombre"];
+            string apellido_1 = Request.Form["apellido_1"];
+            string apellido_2 = Request.Form["apellido_2"];
+            DateTime fhnacimiento = DateTime.Parse(Request.Form["fh_nacimiento"]);
+            
+
+            string email = (string)TempData["email"];
+            TempData.Keep("email");
+            string contraseña = (string)TempData["contraseña"];
+            TempData.Keep("contraseña");
+
+            Usuario usuario = mipagina.TraerUsuario(email, contraseña);
+
+            usuario.Nombre = nombre;
+            usuario.Apellido_1 = apellido_1;
+            usuario.Apellido_2 = apellido_2;
+
+            return RedirectToAction("VisualizarInformacion");
+
+            
+        }
+        public ActionResult VisualizarInformacion()
+        { 
+            string email = (string)TempData["email"];
+            TempData.Keep("email");
+            string contraseña = (string)TempData["contraseña"];
+            TempData.Keep("contraseña");
+
+            Usuario usuario = mipagina.TraerUsuario(email, contraseña);
+
+            return View(usuario);
         }
 
 

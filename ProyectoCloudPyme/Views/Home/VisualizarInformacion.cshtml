@@ -1,9 +1,9 @@
 ﻿@model ProyectoCloudPyme.Models.Usuario
 @{
-    ViewBag.Title = "EditarUsuario";
+    ViewBag.Title = "VisualizarInformacion";
     Layout = "~/Views/Shared/_LayoutCloudPymeSesion.cshtml";
-
 }
+
 <html>
 <head>
     <title>Editar Usuario</title>
@@ -15,31 +15,31 @@
 </head>
 <body>
     <div class="container" id="formulario">
-        @using (Html.BeginForm("CapturarDatosEdicion", "Home", FormMethod.Post))
+        @using (Html.BeginForm("PaginaUsuario", "Home", FormMethod.Post))
         {
-            <h1>| Editar Información Usuario</h1>
+            <h1>| Cambio exitoso!</h1>
             <table style="border-collapse: separate; border-spacing: 20px;">
                 <tr>
                     <td><i class="fa-solid fa-person-walking" style="color: #0F5F54;"></i></td>
-                    <td><input placeholder="Nombre" type="text" name="nombre" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" value="@Model.Nombre" required /></td>
+                    <td><label style="color: #000000;"> Tu nombre actual es @Model.Nombre    </label></td>
 
                 </tr>
                 <tr>
                     <td style="color: #0F5F54; font-size:25px">&rArr;</td>
-                    <td><input placeholder="Primer apellido" type="text" name="apellido_1" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" value="@Model.Apellido_1" /></td>
+                    <td><label style="color: #000000;"> Tu primer apellido actual es @Model.Apellido_1 </label></td>
                 </tr>
                 <tr>
                     <td style="color: #0F5F54; font-size: 25px">&rArr;</td>
-                    <td><input placeholder="Segundo apellido" type="text" name="apellido_2" pattern="[a-zA-Z.,:;()¿?¡!ñ ]+" autocomplete="off" value="@Model.Apellido_2"required /></td>
+                    <td><label style="color: #000000;"> Tu segundo apellido actual es @Model.Apellido_2       </label></td>
                 </tr>
                 <tr>
                     <td><i class="fa-solid fa-cake-candles" style="color: #0F5F54;"></i></td>
-                    <td><input placeholder="" type="date" name="fh_nacimiento" value="@Model.Fhnacimiento" /></td>
-                </tr>
+                    <td><label style="color: #000000;"> Tu fecha de nacimiento actual es @Model.Fhnacimiento.ToShortDateString()</label></td>
+</tr>
 
             </table>
             <div style="text-align: center;">
-                <input type="submit" value="Cambiar">
+                <input type="submit" value="Volver al inicio">
             </div>
         }
     </div>
@@ -48,4 +48,5 @@
 
 </body>
 </html>
+
 
