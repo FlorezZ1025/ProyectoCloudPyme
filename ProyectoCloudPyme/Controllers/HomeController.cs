@@ -7,11 +7,11 @@ using System.Runtime.Remoting.Messaging;
 using System.Security;
 using System.Web;
 using System.Web.Mvc;
-
+using static ProyectoCloudPyme.Models.Enum;
 
 namespace ProyectoCloudPyme.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : SweetController
     {
         Pagina mipagina = new Pagina();
         int cont = 0;
@@ -140,20 +140,12 @@ namespace ProyectoCloudPyme.Controllers
                 TempData.Keep("email");
                 TempData.Keep("contraseña");
 
-                TempData["AlertMessage"] = null;
-                //aqui va un alert
-
+                
                 return RedirectToAction("PaginaUsuario");
                 
             }
 
-            TempData["AlertMessage"] = "No se encontró el usuario";
-            TempData["AlertType"] = "error";
-
-            TempData.Keep("AlertMessage");
-            TempData.Keep("AlertType");
-
-
+            Alert("No se encontró el usuario",NotificationType.error);
             //aqui va un alert
             return RedirectToAction("InicioDeSesion");
         }

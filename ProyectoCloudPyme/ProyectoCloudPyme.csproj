@@ -120,11 +120,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArchivoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SweetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Alimento.cs" />
     <Compile Include="Models\Archivo.cs" />
+    <Compile Include="Models\Enum.cs" />
     <Compile Include="Models\Transporte.cs" />
     <Compile Include="Models\Comercio.cs" />
     <Compile Include="Models\Pagina.cs" />
@@ -145,6 +147,7 @@
     <Content Include="Content\StyleViewRegistro.css" />
     <Content Include="Content\StyleView2.css" />
     <Content Include="Content\StyleView1.css" />
+    <Content Include="Content\sweetalert2.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -162,6 +165,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sweetalert2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -188,11 +192,14 @@
     <Content Include="Views\Home\ElegirPyme.cshtml" />
     <Content Include="Views\Home\SubirArchivos.cshtml" />
     <Content Include="Views\Home\VisualizarInformacion.cshtml" />
+    <Content Include="Views\Shared\_NotificationPanel.cshtml" />
+    <Content Include="Views\Shared\_LayoutAlerta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Files\" />
     <Folder Include="Views\Archivo\" />
+    <Folder Include="Views\Sweet\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

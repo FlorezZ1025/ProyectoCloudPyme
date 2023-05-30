@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "_LayoutAlerta";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/Content/sweetalert2.css" rel="stylesheet" />
+    <script src="~/Scripts/sweetalert2.js"></script>
+</head>
+<body>
+    <div class="body-content">
+
+        @Html.Partial("_NotificationPanel")
+
+        @RenderBody()
+
+    </div>
+   
+</body>
+</html>
